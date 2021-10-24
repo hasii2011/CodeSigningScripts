@@ -1,6 +1,4 @@
-```
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-```
 
 If you use Apple’s Xcode developer environment developing and publishing code signed applications appears to be largely handled by that tool chain.  
 
