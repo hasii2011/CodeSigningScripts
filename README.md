@@ -1,5 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![Bash Shell](https://badges.frapsoft.com/bash/v1/bash.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+## About The Project
 If you use Apple’s Xcode developer environment developing and publishing code signed applications appears to be largely handled by that tool chain.  
 
 To Apple’s credit they have various technical papers scattered around the developer help pages that with serious study you can glean the required information to code sign your non Apple/Swift applications.  
