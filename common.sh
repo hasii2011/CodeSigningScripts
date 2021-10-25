@@ -23,7 +23,7 @@ txReset=$(tput sgr0)   	    # reset attributes
 
 function printError() {
     errorMsg=$*
-    printf "${fgRed}$*${txReset}\n"
+    printf "${txBold}${fgRed}$*${txReset}\n"
 }
 
 function setProjectsBase() {
