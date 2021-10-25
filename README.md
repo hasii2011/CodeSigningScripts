@@ -30,4 +30,4 @@ Once the above completes remove the zip created by `notarizeapp.sh` and rezip th
 That is the file to put on the GitHub release as a binary.
 
 ## References
-https://developer.apple.com/forums/thread/130855
+[Manual Code Signing Example](https://developer.apple.com/forums/thread/130855)
