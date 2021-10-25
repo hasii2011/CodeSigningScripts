@@ -11,3 +11,23 @@ Be aware you will have to pay a developer fee for this privilege.  The piper mus
 
 The scripts in this repository are inspired this [post](https://hsanchezii.wordpress.com/2021/10/06/code-signing-python-py2app-applications/).  It references the document [Apple Code Signing Py2app Applications](https://www.scribd.com/document/530430186/Code-Signing-Py2App-Applications)
 
+## How to use the scripts
+
+You must first create the py2app OS X app
+
+Run the following scripts;  Save the submission ID 
+from step 3
+
+1. `./python39zipsign.sh`
+2. `./signapp.sh`
+3. `./notarizeapp.sh`
+4. `./stapleapp.sh `
+5. `./scripts/codesign/verifysigning.sh`
+
+
+Once the above completes remove the zip created by `notarizeapp.sh` and rezip the application.
+
+That is the file to put on the GitHub release as a binary.
+
+## References
+https://developer.apple.com/forums/thread/130855
