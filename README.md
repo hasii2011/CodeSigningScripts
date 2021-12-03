@@ -26,7 +26,7 @@ All the scripts require two parameters.  The first is the project directory unde
 2. `./signapp.sh` - generates a `CodeSigning.log` file with the signing results
 3. `./notarizeapp.sh`
 4. `./stapleapp.sh `
-5. `./scripts/codesign/verifysigning.sh`
+5. `./verifysigning.sh`
 
 
 Once the above completes remove the zip created by `notarizeapp.sh` and rezip the application.
