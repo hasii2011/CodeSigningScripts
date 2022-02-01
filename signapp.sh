@@ -21,12 +21,14 @@ FULL_APP_NAME="${FULL_PROJECT_DIR}/dist/${APP}"
 export LOGFILE="CodeSigning.log"
 #
 # PyGitIssueClone.app/Contents/Frameworks/liblzma.5.dylib: main executable failed strict validation
-# manually copy from: /usr/local/Cellar/xz/5.2.5/lib/liblzma.5.dylib
+echo "Manually copy from: /usr/local/Cellar/xz/5.2.5/lib/liblzma.5.dylib"
 # https://stackoverflow.com/questions/62095338/py2app-fails-macos-signing-on-liblzma-5-dylib
 #
 export GOOD_LIB='/usr/local/Cellar/xz/5.2.5/lib/liblzma.5.dylib'
-export DIR_TO_OVER_WRITE="${APP}/Contents/Frameworks"
+export DIR_TO_OVER_WRITE="${FULL_APP_NAME}/Contents/Frameworks"
 
+# echo "GOOD_LIB: ${GOOD_LIB}"
+# echo "DIR_TO_OVER_WRITE: ${DIR_TO_OVER_WRITE}"
 cp -vp ${GOOD_LIB} ${DIR_TO_OVER_WRITE}
 #
 #  Ugh code signing will be the death of me
@@ -53,6 +55,6 @@ find "${FULL_APP_NAME}" -iname '*.so' -or -iname '*.dylib' |
         codesign --sign "${IDENTITY}" ${OPTIONS} "${libfile}" >> ${LOGFILE} 2>&1 ;
     done;
 
-codesign --sign "${IDENTITY}" ${OPTIONS} "${FULL_APP_NAME}/Contents/MacOS/python"           >> ${LOGFILE} 2>&1
-codesign --sign "${IDENTITY}" ${OPTIONS} "${FULL_APP_NAME}/Contents/MacOS/PyGitIssueClone"  >> ${LOGFILE} 2>&1
+codesign --sign "${IDENTITY}" ${OPTIONS} "${FULL_APP_NAME}/Contents/MacOS/python"               >> ${LOGFILE} 2>&1
+codesign --sign "${IDENTITY}" ${OPTIONS} "${FULL_APP_NAME}/Contents/MacOS/${APPLICATION_NAME}"  >> ${LOGFILE} 2>&1
 
