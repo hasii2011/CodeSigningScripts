@@ -29,6 +29,7 @@ export DIR_TO_OVER_WRITE="${FULL_APP_NAME}/Contents/Frameworks"
 
 # echo "GOOD_LIB: ${GOOD_LIB}"
 # echo "DIR_TO_OVER_WRITE: ${DIR_TO_OVER_WRITE}"
+# This line left for compatability with python & brew on Intel Macs
 cp -vp ${GOOD_LIB} ${DIR_TO_OVER_WRITE}
 #
 #  Ugh code signing will be the death of me
