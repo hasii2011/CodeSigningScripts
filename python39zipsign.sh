@@ -8,6 +8,7 @@
 #
 tput clear
 source ./common.sh
+checkRequiredEnvironment
 setProjectsBase
 
 PROJECT_DIR=${1}
@@ -41,7 +42,6 @@ echo "Unzip it"
 /usr/bin/ditto -v -x -k "${TEMP_DIR}/${ZIP_NAME}" "${TEMP_DIR}/${UNZIP_DIR}"
 
 
-export IDENTITY="Developer ID Application: Humberto Sanchez II (NA8Z96F8V9)"
 # export OPTIONS="--verbose --timestamp --options=runtime "
 export OPTIONS="--force --verbose --timestamp --options=runtime "
 

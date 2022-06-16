@@ -2,6 +2,7 @@
 
 tput clear
 source ./common.sh
+checkRequiredEnvironment
 setProjectsBase
 
 PROJECT_DIR=${1}
@@ -37,10 +38,6 @@ cp -vp ${GOOD_LIB} ${DIR_TO_OVER_WRITE}
 rm -vrf ${FULL_APP_NAME}/Contents/Resources/lib/python3.9/todoist/.DS_Store
 rm -vrf ${FULL_APP_NAME}/Contents/Resources/lib/python3.9/numpy/f2py/tests/src/assumed_shape/.f2py_f2cmap
 
-#
-# This is a real certificate - expires 21 September 2026
-#
-export IDENTITY="Developer ID Application: Humberto Sanchez II (NA8Z96F8V9)"
 export OPTIONS="--verbose --force --timestamp --options=runtime "
 #
 #  assumes Xcode 13 is installed

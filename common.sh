@@ -26,6 +26,13 @@ function printError() {
     printf "${txBold}${fgRed}$*${txReset}\n"
 }
 
+function checkRequiredEnvironment() {
+
+    if [[ -z "${IDENTITY}" ]]; then
+        printError "You need to define IDENTITY for code signing"
+        exit 44
+    fi
+}
 function setProjectsBase() {
     #
     # Define your own variable if you do not like mine

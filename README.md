@@ -37,6 +37,7 @@ That is the file to put on the GitHub release as a binary.
 
 ## Failure Error Codes
 
+*   44 - You failed to provide the IDENTITY environment variable
 *   66 - You failed to provide the project directory name
 *   77 - You failed to provide the application namne
 *   88 - The combination of `PROJECTS_BASE` and the supplied project directory name are not valid
