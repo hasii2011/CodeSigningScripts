@@ -25,7 +25,10 @@ export LOGFILE="CodeSigning.log"
 echo "Manually copy from: /usr/local/Cellar/xz/5.2.5/lib/liblzma.5.dylib"
 # https://stackoverflow.com/questions/62095338/py2app-fails-macos-signing-on-liblzma-5-dylib
 #
-export GOOD_LIB='/usr/local/Cellar/xz/5.2.5/lib/liblzma.5.dylib'
+# export GOOD_LIB='/usr/local/Cellar/xz/5.2.5/lib/liblzma.5.dylib'
+# if you are on the new Apple silicon homebrew is now here:
+export GOOD_LIB='/opt/homebrew/Cellar/xz/5.2.5_1/lib/liblzma.5.dylib'
+
 export DIR_TO_OVER_WRITE="${FULL_APP_NAME}/Contents/Frameworks"
 
 # echo "GOOD_LIB: ${GOOD_LIB}"
@@ -34,9 +37,12 @@ export DIR_TO_OVER_WRITE="${FULL_APP_NAME}/Contents/Frameworks"
 cp -vp ${GOOD_LIB} ${DIR_TO_OVER_WRITE}
 #
 #  Ugh code signing will be the death of me
+#  Either invalid links or something code signing or verifying complains about
 #
-rm -vrf ${FULL_APP_NAME}/Contents/Resources/lib/python3.9/todoist/.DS_Store
-rm -vrf ${FULL_APP_NAME}/Contents/Resources/lib/python3.9/numpy/f2py/tests/src/assumed_shape/.f2py_f2cmap
+echo "Clean up for code signing"                                                                             >> ${LOGFILE} 2>&1
+rm -vrf ${FULL_APP_NAME}/Contents/Resources/lib/python3.10/todoist/.DS_Store                                 >> ${LOGFILE} 2>&1
+rm -vrf ${FULL_APP_NAME}/Contents/Resources/lib/python3.10/numpy/f2py/tests/src/assumed_shape/.f2py_f2cmap   >> ${LOGFILE} 2>&1
+rm -vrf ${FULL_APP_NAME}/Contents/Resources/lib/python3.10/site.pyo                                          >> ${LOGFILE} 2>&1
 
 export OPTIONS="--verbose --force --timestamp --options=runtime "
 #
