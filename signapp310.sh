@@ -27,7 +27,7 @@ echo "Manually copy from: /usr/local/Cellar/xz/5.2.5/lib/liblzma.5.dylib"
 #
 # export GOOD_LIB='/usr/local/Cellar/xz/5.2.5/lib/liblzma.5.dylib'
 # if you are on the new Apple silicon homebrew is now here:
-export GOOD_LIB='/opt/homebrew/Cellar/xz/5.2.5_1/lib/liblzma.5.dylib'
+export GOOD_LIB='/opt/homebrew/opt/xz/lib/liblzma.5.dylib'
 
 export DIR_TO_OVER_WRITE="${FULL_APP_NAME}/Contents/Frameworks"
 

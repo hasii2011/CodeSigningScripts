@@ -22,8 +22,8 @@ The scripts require that you define an environment variable named `PROJECTS_BASE
 
 All the scripts require two parameters.  The first is the project directory under `PROJECTS_BASE`.  The second is the name of the py2app application name.  You must supply these values and they must be legal or the scripts quit with a specific error code.  Run the scripts in this order.
 
-1. `./python39zipsign.sh` - generates a `PIL-LibSigning.log` file with the signing results
-2. `./signapp.sh` - generates a `CodeSigning.log` file with the signing results
+1. `./python39zipsign.sh` - generates a `PIL-LibSigning.log` file with the signing results (Version specific, xxx310 supported)
+2. `./signapp.sh` - generates a `CodeSigning.log` file with the signing results (Version specific xxx310 supported)
 3. `./notarizeapp.sh`
 4. `./stapleapp.sh `
 5. `./verifysigning.sh`
