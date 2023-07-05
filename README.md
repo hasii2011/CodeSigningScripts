@@ -1,8 +1,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![Bash Shell](https://badges.frapsoft.com/bash/v1/bash.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 ## About The Project
+
+This project has been re-implemented as [Python CLI Scripts](https://github.com/hasii2011/py2appsigner).  As such it is not maintained.
+
 If you use Apple’s Xcode developer environment developing and publishing code signed applications appears to be largely handled by that tool chain.  
 
 To Apple’s credit they have various technical papers scattered around the developer help pages that with serious study you can glean the required information to code sign your non Apple/Swift applications.  
